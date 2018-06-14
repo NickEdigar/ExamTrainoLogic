@@ -1,0 +1,7 @@
+li {
+  font-size: 1.2em;
+  list-style: none;
+}
+.element:hover {
+  background-color: #01bbff;
+}

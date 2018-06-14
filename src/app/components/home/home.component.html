@@ -1,0 +1,14 @@
+<h1><strong>Contact Tree</strong></h1>
+
+<ul>
+  <li *ngFor="let item of contacts;let i = index" (click)="showSubmenu(item, i)">
+    <div class="element">{{item.name}}</div>
+    <ul>
+      <app-submenu
+        *ngIf="isShow[i]"
+        [itemsSub]="item.contacts"
+      ></app-submenu>
+    </ul>
+  </li>
+</ul>
+

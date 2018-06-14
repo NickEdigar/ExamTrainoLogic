@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let item of itemsSub;let i = index" (click)="showSubmenu(item, i, $event)">
+    <div class="element">{{item.name}}</div>
+    <app-submenu
+      *ngIf="isShow[i]"
+      [itemsSub]="item.contacts"
+    ></app-submenu>
+  </li>
+</ul>
